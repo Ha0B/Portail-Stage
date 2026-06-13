@@ -44,7 +44,6 @@ public class JwtFilter extends OncePerRequestFilter {
         }
 
         try {
-            // on tente l'extraction (c'est ici que l'erreur MalformedJwtException se produisait)
             username = jwtService.extractUsername(jwtToken);
         } catch (Exception e) {
             // Si le token est expire ou malforme, on attrape l'erreur pour ne pas faire planter l'application.
