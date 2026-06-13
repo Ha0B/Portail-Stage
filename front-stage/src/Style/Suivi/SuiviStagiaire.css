@@ -1,0 +1,390 @@
+/* SuiviStagiaire.css – version moderne et responsive */
+
+.suivi-container {
+    background: linear-gradient(135deg, #f5f7fc 0%, #eef2f8 100%);
+    min-height: 100vh;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Cards “glassmorphisme” */
+.card-glass {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(2px);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid rgba(203, 213, 225, 0.3);
+}
+
+.card-glass:hover {
+    box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.08);
+}
+
+.card-header-glass {
+    background: transparent;
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e9edf2;
+    color: #0f172a;
+    letter-spacing: -0.2px;
+}
+
+.card-body-glass {
+    padding: 1.5rem;
+}
+
+/* KPI cards */
+.kpi-card {
+    background: white;
+    border-radius: 1.25rem;
+    padding: 1.2rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.2s;
+    border: 1px solid #eef2f6;
+}
+
+.kpi-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.kpi-content {
+    flex: 1;
+}
+
+.kpi-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #5b6e8c;
+}
+
+.kpi-value {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    color: #0a2540;
+}
+
+/* Avatar */
+.avatar-large {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(145deg, #eef2ff, #e0e7ff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #1f3a8a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Info rows */
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 0.9rem;
+}
+
+.info-row i {
+    width: 20px;
+    color: #64748b;
+}
+
+.info-label-sm {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #6c86a3;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.2rem;
+}
+
+.info-value-sm {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1e293b;
+}
+
+/* Objectifs */
+.objectifs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.objectif-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #fafcff;
+    border-radius: 1rem;
+    border: 1px solid #eef2f8;
+    transition: all 0.15s;
+}
+
+.objectif-item:hover {
+    background: white;
+    border-color: #cbd5e1;
+}
+
+.objectif-info {
+    flex: 1;
+}
+
+.objectif-title {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.priority-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.7rem;
+    border-radius: 30px;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.priority-haute {
+    background: #fee2e2;
+    color: #aa2e2e;
+}
+
+.priority-moyenne {
+    background: #fff3e0;
+    color: #b45a0a;
+}
+
+.priority-basse {
+    background: #e0f2fe;
+    color: #0c6b8f;
+}
+
+.objectif-description {
+    font-weight: 500;
+    color: #0f172a;
+}
+
+.objectif-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: #5b6e8c;
+}
+
+.status-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.7rem;
+    border-radius: 30px;
+}
+
+.status-valid {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.status-pending {
+    background: #fff3e0;
+    color: #b45309;
+}
+
+.objectif-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    cursor: pointer;
+}
+
+.btn-success-icon {
+    color: #2b9348;
+}
+
+.btn-success-icon:hover {
+    background: #e9f9ef;
+    transform: scale(1.02);
+}
+
+/* Rapports grid */
+.rapports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.rapport-card {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.75rem 1rem;
+    background: #f8fafd;
+    border-radius: 1rem;
+    border: 1px solid #eef2f8;
+    transition: 0.1s;
+}
+
+.rapport-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.rapport-details {
+    flex: 1;
+}
+
+.rapport-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.rapport-date {
+    font-size: 0.7rem;
+    color: #5e6f8d;
+}
+
+.rapport-actions {
+    display: flex;
+    gap: 0.3rem;
+}
+
+/* Progress bar personnalisée */
+.progress-modern {
+    margin-top: 0.5rem;
+}
+
+.progress-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    color: #475569;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 12px;
+    background: #e2e8f0;
+}
+
+.progress-bar.bg-gradient {
+    background: linear-gradient(90deg, #2b9348, #55a630);
+    border-radius: 12px;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #7c8ba0;
+}
+
+.empty-state i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.6;
+}
+
+/* Badges / Boutons */
+.btn-modern {
+    border-radius: 60px;
+    padding: 0.5rem 1.4rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.bg-primary-subtle {
+    background: #eef2ff;
+}
+
+.text-primary {
+    color: #2c3e9b;
+}
+
+.bg-success-subtle {
+    background: #e3f7ec;
+}
+
+.text-success {
+    color: #1f7840;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card-body-glass {
+        padding: 1rem;
+    }
+    .kpi-value {
+        font-size: 1.5rem;
+    }
+    .avatar-large {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Tableau des objectifs */
+.objectifs-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.objectifs-table th {
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #5b6e8c;
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid #e9edf2;
+}
+
+.objectifs-table td {
+    padding: 0.75rem 0.5rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.objectifs-table tr:last-child td {
+    border-bottom: none;
+}
+
+.btn-edit-icon {
+    color: #0d6efd;
+}
+.btn-edit-icon:hover {
+    background: #e7f1ff;
+    transform: scale(1.02);
+}

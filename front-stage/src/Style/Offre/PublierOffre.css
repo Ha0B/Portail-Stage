@@ -1,0 +1,356 @@
+/* PublierOffre.css */
+
+/* Styles généraux */
+body {
+    background-color: #f5f0e8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Conteneur principal du formulaire */
+.form-container {
+    background-color: #fffef7;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e8e0d5;
+    overflow: hidden;
+}
+
+/* En-tête du formulaire */
+.form-header {
+    background-color: #faf7f2;
+    padding: 25px 30px;
+    border-bottom: 1px solid #e8e0d5;
+}
+
+.form-header h2 {
+    color: #2c2b28;
+    font-size: 24px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.form-header p {
+    color: #8b7f6e;
+    margin: 8px 0 0;
+    font-size: 14px;
+}
+
+/* Corps du formulaire */
+.form-body {
+    padding: 30px;
+}
+
+/* Labels */
+.form-label {
+    color: #4a4238;
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 14px;
+    display: block;
+}
+
+.required-field::after {
+    content: "*";
+    color: #c17b6e;
+    margin-left: 4px;
+}
+
+/* Champs de formulaire */
+.form-control, .form-select {
+    background-color: #ffffff;
+    border: 1px solid #e0d6ca;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #2c2b28;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #c9b69a;
+    box-shadow: 0 0 0 3px rgba(201, 182, 154, 0.15);
+    outline: none;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Placeholders */
+.form-control::placeholder, .form-select::placeholder {
+    color: #b8aa98;
+    font-size: 13px;
+}
+
+/* Texte d'aide */
+.form-text {
+    font-size: 12px;
+    color: #8b7f6e;
+    margin-top: 4px;
+}
+
+/* Boutons */
+.btn-submit {
+    background-color: #d4c5ae;
+    border: none;
+    padding: 11px 28px;
+    color: #3a3530;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-submit:hover {
+    background-color: #c9b69a;
+    color: #2c2b28;
+    transform: translateY(-1px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+.btn-reset {
+    background-color: #ece5db;
+    border: none;
+    padding: 11px 28px;
+    color: #6b5f50;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-reset:hover {
+    background-color: #e0d5c8;
+    color: #4a4238;
+    transform: translateY(-1px);
+}
+
+.btn-reset:active {
+    transform: translateY(0);
+}
+
+/* Séparateur */
+hr {
+    border: none;
+    border-top: 1px solid #ece5db;
+    margin: 20px 0;
+}
+
+/* Note d'information */
+.info-note {
+    background-color: #faf7f2;
+    border-left: 3px solid #d4c5ae;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #6b5f50;
+    margin-bottom: 25px;
+}
+
+.info-note i {
+    margin-right: 8px;
+    color: #b8a68b;
+}
+
+/* Grille Bootstrap personnalisée */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+/* Marges */
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+/* Flexbox */
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+/* Messages d'erreur (optionnel) */
+.error-message {
+    color: #c17b6e;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.success-message {
+    background-color: #d4c5ae;
+    color: #2c2b28;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Champs invalides */
+.form-control.invalid, .form-select.invalid {
+    border-color: #c17b6e;
+}
+
+.form-control.invalid:focus, .form-select.invalid:focus {
+    border-color: #c17b6e;
+    box-shadow: 0 0 0 3px rgba(193, 123, 110, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .form-body {
+        padding: 20px;
+    }
+    
+    .form-header {
+        padding: 20px;
+    }
+    
+    .form-header h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-body {
+        padding: 15px;
+    }
+    
+    .form-header {
+        padding: 15px;
+    }
+    
+    .btn-submit, .btn-reset {
+        width: 100%;
+        margin: 5px 0;
+        padding: 10px 20px;
+    }
+    
+    .btn-reset {
+        margin-left: 0;
+    }
+    
+    .d-flex {
+        flex-direction: column;
+    }
+    
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .row {
+        flex-direction: column;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-label {
+        font-size: 13px;
+    }
+    
+    .form-control, .form-select {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    .info-note {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+}
+
+/* Animation pour les boutons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.btn-submit:active, .btn-reset:active {
+    animation: pulse 0.2s ease;
+}
+
+/* Style pour le focus visible (accessibilité) */
+.btn-submit:focus-visible, .btn-reset:focus-visible,
+.form-control:focus-visible, .form-select:focus-visible {
+    outline: 2px solid #c9b69a;
+    outline-offset: 2px;
+}
+
+/* Tooltip personnalisé (optionnel) */
+.tooltip-custom {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+}
+
+.tooltip-custom:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2c2b28;
+    color: #fffef7;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+    margin-bottom: 5px;
+}
+
+/* Style pour les icônes (si vous utilisez FontAwesome) */
+.fa, .fas, .far {
+    margin-right: 8px;
+}

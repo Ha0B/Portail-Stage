@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f5f1e8;
+}
+
+.home {
+  background-color: #f5f1e8;
+  min-height: 100vh;
+  color: #111;
+}
+
+/* HERO */
+.hero-section {
+  padding: 100px 0 0 0;   /* plus de marge basse */
+}
+
+.hero-title {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0;        /* supprime la marge sous le titre */
+}
+
+.hero-title span {
+  color: #b08968;
+}
+
+.hero-text {
+  margin: 25px 0 0 0;      /* seulement marge haute, pas de marge basse */
+  font-size: 18px;
+  color: #555;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  display: block;          /* évite l'espace sous l'image */
+}
+
+/* BUTTONS */
+.btn-dark-custom {
+  background-color: #111;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-dark-custom:hover {
+  background-color: #333;
+}
+
+.btn-beige-custom {
+  background-color: #d8c3a5;
+  color: #111;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.btn-beige-custom:hover {
+  background-color: #c4a484;
+}
+
+/* STATS */
+.stats-section {
+  padding: 40px 0 80px 0;   /* ajoute un peu d'espace aéré mais pas de gap bizarre */
+}
+
+.stat-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.stat-card h2 {
+  color: #b08968;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  margin-bottom: 0;
+}
+
+/* FEATURES */
+.features-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #666;
+  margin-bottom: 0;
+}
+
+.feature-card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  text-align: center;
+  height: 100%;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.feature-icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.feature-card h4 {
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  margin-bottom: 0;
+}
+
+/* ABOUT (si utilisé) */
+.about-section {
+  padding: 80px 0;
+}
+
+.about-box {
+  background: white;
+  padding: 50px;
+  border-radius: 25px;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+.about-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.about-list li {
+  margin-bottom: 12px;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: white;
+  padding: 60px 0 20px;
+  margin-top: 50px;
+}
+
+.footer h4 {
+  margin-bottom: 20px;
+}
+
+.footer a {
+  display: block;
+  text-decoration: none;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  color: #aaa;
+}

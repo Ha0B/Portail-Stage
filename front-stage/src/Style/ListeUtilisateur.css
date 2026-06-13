@@ -1,0 +1,450 @@
+/* Variables de couleur */
+:root {
+  --blanc: #FFFFFF;
+  --noir: #1A1A1A;
+  --casse: #F5F0E8;
+  --beige: #D4C5B0;
+  --beige-fonce: #B8A88A;
+  --gris-clair: #E8E4DC;
+  --gris-moyen: #A0A0A0;
+  --rouge: #DC3545;
+  --rouge-fonce: #B02A37;
+  --vert: #28A745;
+  --vert-fonce: #1E7E34;
+  --ombre: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--casse);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.utilisateur-list-container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--blanc);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px var(--ombre);
+}
+
+/* En-tête */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--beige);
+}
+
+.header h1 {
+  color: var(--noir);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  background-color: var(--casse);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.stats span {
+  color: var(--noir);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Conteneur du tableau */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  background-color: var(--blanc);
+}
+
+/* Style du tableau */
+.utilisateur-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--blanc);
+}
+
+.utilisateur-table thead {
+  background-color: var(--noir);
+}
+
+.utilisateur-table th {
+  padding: 1rem;
+  text-align: left;
+  color: var(--blanc);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.utilisateur-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--gris-clair);
+  color: var(--noir);
+  font-size: 0.9rem;
+}
+
+.utilisateur-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.utilisateur-table tbody tr:hover {
+  background-color: var(--casse);
+}
+
+.utilisateur-table tbody tr.inactive {
+  opacity: 0.7;
+  background-color: var(--gris-clair);
+}
+
+/* Badges de rôle */
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.role-badge.admin {
+  background-color: var(--noir);
+  color: var(--blanc);
+}
+
+.role-badge.etudiant {
+  background-color: var(--beige);
+  color: var(--noir);
+}
+
+.role-badge.entreprise {
+  background-color: var(--casse);
+  color: var(--noir);
+  border: 1px solid var(--beige);
+}
+
+.role-badge.encadrant {
+  background-color: var(--beige-fonce);
+  color: var(--blanc);
+}
+
+/* Badge de statut */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background-color: var(--vert);
+  color: var(--blanc);
+}
+
+.status-badge.inactive {
+  background-color: var(--gris-moyen);
+  color: var(--blanc);
+}
+
+/* Boutons d'action */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-button,
+.delete-button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.edit-button {
+  background-color: var(--beige);
+  color: var(--noir);
+}
+
+.edit-button:hover {
+  background-color: var(--beige-fonce);
+  transform: translateY(-1px);
+}
+
+.delete-button {
+  background-color: var(--rouge);
+  color: var(--blanc);
+}
+
+.delete-button:hover {
+  background-color: var(--rouge-fonce);
+  transform: translateY(-1px);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: var(--blanc);
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 2px solid var(--beige);
+}
+
+.modal-header h2 {
+  color: var(--noir);
+  font-size: 1.5rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--gris-moyen);
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: var(--rouge);
+}
+
+.modal-content form {
+  padding: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--noir);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--beige);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--beige-fonce);
+  box-shadow: 0 0 0 3px rgba(180, 160, 120, 0.1);
+}
+
+.form-group.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.form-group.checkbox input {
+  width: auto;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--beige);
+}
+
+.cancel-button,
+.save-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.cancel-button {
+  background-color: var(--gris-clair);
+  color: var(--noir);
+}
+
+.cancel-button:hover {
+  background-color: var(--gris-moyen);
+}
+
+.save-button {
+  background-color: var(--vert);
+  color: var(--blanc);
+}
+
+.save-button:hover {
+  background-color: var(--vert-fonce);
+}
+
+/* États de chargement et erreur */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--beige);
+  border-top-color: var(--noir);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: var(--rouge);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.retry-button {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--noir);
+  color: var(--blanc);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+.retry-button:hover {
+  opacity: 0.9;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .utilisateur-list-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .utilisateur-table th,
+  .utilisateur-table td {
+    padding: 0.75rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .edit-button,
+  .delete-button {
+    width: 100%;
+  }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--casse);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--beige);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--beige-fonce);
+}

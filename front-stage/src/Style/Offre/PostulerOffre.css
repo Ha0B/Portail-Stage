@@ -1,0 +1,330 @@
+/* Style personnalisé - Formulaire Horizontal
+   Thème Noir, Blanc Cassé & Beige */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-horizontal-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f3ef 0%, #e8e4dc 100%);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Carte principale */
+.card-horizontal {
+    background-color: #faf8f5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    transition: transform 0.3s ease;
+}
+
+.card-horizontal:hover {
+    transform: translateY(-5px);
+}
+
+/* En-tête */
+.card-header-horizontal {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 25px 35px;
+    border-bottom: 3px solid #c4b8a8;
+}
+
+.card-header-horizontal h2 {
+    color: #faf8f5;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.card-header-horizontal p {
+    color: #c4b8a8;
+    margin: 8px 0 0;
+    font-size: 0.95rem;
+}
+
+/* Corps du formulaire */
+.card-body-horizontal {
+    padding: 35px;
+}
+
+/* Sections */
+.form-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e4dc;
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-section-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-section-title .section-icon {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #faf8f5;
+}
+
+/* Grilles horizontales */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Champs */
+.form-group-horizontal {
+    flex: 1;
+}
+
+.form-group-full {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-label-horizontal {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+}
+
+.form-label-horizontal .required {
+    color: #8b6b4d;
+    margin-left: 4px;
+}
+
+.form-control-horizontal {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border: 1.5px solid #e0dbd2;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.form-control-horizontal:focus {
+    outline: none;
+    border-color: #c4b8a8;
+    box-shadow: 0 0 0 3px rgba(196, 184, 168, 0.2);
+}
+
+.form-control-horizontal:hover {
+    border-color: #c4b8a8;
+}
+
+textarea.form-control-horizontal {
+    resize: vertical;
+    min-height: 100px;
+}
+
+select.form-control-horizontal {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231a1a1a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+/* Input avec icône */
+.input-icon-group {
+    position: relative;
+}
+
+.input-icon-group i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c4b8a8;
+    z-index: 1;
+}
+
+.input-icon-group .form-control-horizontal {
+    padding-left: 40px;
+}
+
+/* File input */
+input[type="file"].form-control-horizontal {
+    padding: 10px;
+}
+
+input[type="file"].form-control-horizontal::-webkit-file-upload-button {
+    background: #1a1a1a;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    color: #faf8f5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+}
+
+input[type="file"].form-control-horizontal::-webkit-file-upload-button:hover {
+    background: #2d2d2d;
+    transform: translateY(-1px);
+}
+
+/* Radio buttons */
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-check-input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #1a1a1a;
+}
+
+.form-check-label {
+    color: #1a1a1a;
+    cursor: pointer;
+}
+
+/* Boutons */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #e8e4dc;
+}
+
+.btn-horizontal {
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary-horizontal {
+    background: #1a1a1a;
+    color: #faf8f5;
+}
+
+.btn-primary-horizontal:hover {
+    background: #2d2d2d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary-horizontal {
+    background: #e8e4dc;
+    color: #1a1a1a;
+    border: 1px solid #d4cdc1;
+}
+
+.btn-secondary-horizontal:hover {
+    background: #ddd6cc;
+    transform: translateY(-2px);
+}
+
+/* Message de confirmation */
+.alert-horizontal {
+    padding: 15px 20px;
+    border-radius: 12px;
+    animation: slideIn 0.4s ease-out;
+    position: relative;
+}
+
+.alert-success-horizontal {
+    background-color: #e8f0e8;
+    border: 1px solid #c5d5c0;
+    color: #2d5a2d;
+}
+
+.text-muted {
+    color: #8b6b4d !important;
+    font-size: 0.75rem;
+    display: block;
+    margin-top: 5px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn-horizontal {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .card-header-horizontal {
+        padding: 20px;
+    }
+    
+    .card-header-horizontal h2 {
+        font-size: 1.4rem;
+    }
+    
+    .card-body-horizontal {
+        padding: 20px;
+    }
+    
+    .form-section-title {
+        font-size: 1rem;
+    }
+}
+
+::selection {
+    background-color: #c4b8a8;
+    color: #1a1a1a;
+}

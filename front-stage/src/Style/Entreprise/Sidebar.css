@@ -1,0 +1,172 @@
+.sidebar-entreprise{
+  width: 230px; /* avant 280px */
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    #0c6b43 0%,
+    #095c39 100%
+  );
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 18px 14px; /* réduit */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* MAIN CONTENT */
+.main-content{
+  margin-left: 230px; /* même largeur que sidebar */
+  padding: 28px;
+}
+
+/* LOGO */
+.sidebar-logo{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.brand-icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-title{
+  font-size: 28px; /* plus petit */
+  font-weight: 700;
+  line-height: 1;
+}
+
+.brand-sub{
+  font-size: 13px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+/* CARD ENTREPRISE */
+
+.company-card{
+  background: rgba(255,255,255,0.10);
+  border-radius: 18px;
+
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 24px;
+}
+
+.company-card img{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.company-name{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.company-role{
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* NAV */
+
+.sidebar-nav{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-section-label{
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+  margin: 14px 10px 8px;
+}
+
+/* LINKS */
+
+.nav-link{
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 14px;
+  border-radius: 14px;
+
+  font-size: 15px; /* plus compact */
+  font-weight: 500;
+
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.nav-link svg{
+  width: 18px;
+  height: 18px;
+}
+
+.nav-link:hover{
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+
+.nav-link.active{
+  background: rgba(255,255,255,0.14);
+  color: white;
+  font-weight: 600;
+}
+
+/* FOOTER */
+
+.sidebar-footer{
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.logout-btn{
+  font-size: 15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+  .sidebar-entreprise{
+    width: 100%;
+    position: relative;
+    min-height: auto;
+  }
+
+  .main-content{
+    margin-left: 0;
+  }
+
+}

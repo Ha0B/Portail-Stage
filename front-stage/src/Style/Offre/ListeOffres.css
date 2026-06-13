@@ -1,0 +1,85 @@
+/* ===== ALIGNEMENT PERFECT ===== */
+.filter-card .row {
+  align-items: flex-end !important; /* Force l'alignement par le bas */
+}
+
+/* Le champ recherche (col) doit prendre tout l'espace restant */
+.filter-card .col {
+  flex: 1;
+}
+
+/* Uniformise la hauteur de tous les champs */
+.filter-card input,
+.filter-card .Button button,
+.filter-card .Input-wrapper input { /* selon la structure réelle de Input */
+  height: 42px; /* Ajustez selon votre design */
+}
+
+/* Supprime la marge du label pour ne pas décaler */
+.filter-card .Input label {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  color: #5a6e85;
+}
+
+/* Ajuste le conteneur du label pour qu'il ne prenne pas trop de hauteur */
+.filter-card .Input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* pousse le label en bas */
+  height: 100%;
+}
+
+/* Si les boutons ont une marge interne, la supprimer */
+.filter-card .col-auto .Button {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* Pour que les boutons aient la même hauteur que l'input */
+.filter-card .Button button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* ===== LE RESTE DE VOTRE CSS (conserve l'existant) ===== */
+.container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.filter-card {
+  background: #f9fafb;
+  border-radius: 28px;
+  border: 1px solid #eef2f6;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.75rem;
+  margin-top: 1rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fafcff;
+  border-radius: 2rem;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.section-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3b4e66;
+  margin-bottom: 1rem;
+  padding-left: 0.25rem;
+} 

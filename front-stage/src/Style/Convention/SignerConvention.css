@@ -1,0 +1,176 @@
+.signer-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+}
+
+.convention-card {
+  background: #f8f9fc;
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  border-left: 5px solid #0d6efd;
+  margin-bottom: 2rem;
+}
+
+.convention-card h3 {
+  margin-top: 0;
+  color: #0a58ca;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.badge-success {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+
+.badge-warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.otp-section {
+  background: #f1f3f5;
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.otp-section label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.otp-input {
+  width: 220px;
+  padding: 10px 12px;
+  font-size: 1.2rem;
+  text-align: center;
+  letter-spacing: 4px;
+  border: 2px solid #ced4da;
+  border-radius: 40px;
+  margin: 0.5rem auto 1rem;
+  display: block;
+  outline: none;
+  transition: 0.2s;
+}
+
+.otp-input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 3px rgba(13,110,253,0.25);
+}
+
+.btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 1rem;
+  margin: 0 6px;
+}
+
+.btn-primary {
+  background: #0d6efd;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #0b5ed7;
+  transform: scale(1.02);
+}
+
+.btn-success {
+  background: #198754;
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background: #157347;
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5c636a;
+}
+
+.btn-outline-primary {
+  background: transparent;
+  border: 2px solid #0d6efd;
+  color: #0d6efd;
+}
+
+.btn-outline-primary:hover {
+  background: #0d6efd;
+  color: white;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.alert {
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.alert-success {
+  background: #d1e7dd;
+  color: #0f5132;
+  border-left: 5px solid #198754;
+}
+
+.alert-danger {
+  background: #f8d7da;
+  color: #842029;
+  border-left: 5px solid #dc3545;
+}
+
+.alert-info {
+  background: #cfe2ff;
+  color: #084298;
+  border-left: 5px solid #0d6efd;
+}
+
+.pdf-button {
+  margin-top: 1rem;
+}
+
+.back-button {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.signer-loader, .signer-error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #555;
+}

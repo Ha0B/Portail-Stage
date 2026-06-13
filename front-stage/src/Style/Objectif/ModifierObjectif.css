@@ -1,0 +1,90 @@
+/* EditObjective.css */
+.edit-objective-container {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card-custom {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.card-header-custom {
+    background: linear-gradient(135deg, #2c3e50, #f39c12);
+    color: white;
+    padding: 1.2rem 1.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.card-body-custom {
+    padding: 2rem;
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.required:after {
+    content: "*";
+    color: #e74c3c;
+    margin-left: 4px;
+}
+
+.btn-submit {
+    background: #f39c12;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-submit:hover {
+    background: #e67e22;
+    transform: translateY(-1px);
+}
+
+.btn-cancel {
+    background: #6c757d;
+    border: none;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+}
+
+.btn-cancel:hover {
+    background: #5a6268;
+}
+
+.loading-spinner {
+    text-align: center;
+    padding: 2rem;
+}
+
+.json-preview {
+    background: #f8f9fa;
+    border-left: 3px solid #f39c12;
+    padding: 1rem;
+    font-size: 0.85rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.alert-fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+    min-width: 280px;
+    animation: fadeOut 4s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}   

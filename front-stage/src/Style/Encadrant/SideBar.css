@@ -1,0 +1,126 @@
+/* --- Style général de la Sidebar --- */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #312275 !important;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  border-top-right-radius: 16px; /* Optionnel, si la maquette a des bords arrondis */
+  border-bottom-right-radius: 16px;
+}
+
+/* --- En-tête : Logo --- */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  padding: 0 8px;
+}
+
+.brand-icon {
+  background-color: rgba(255, 255, 255, 0.1); /* Fond légèrement transparent */
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.brand-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.brand-sub {
+  font-size: 11px;
+  color: #b5aae0;
+}
+
+/* --- Section Utilisateur --- */
+.user-info-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px;
+  margin-bottom: 32px;
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.user-role {
+  font-size: 12px;
+  color: #b5aae0;
+  margin-top: 2px;
+}
+
+/* --- Menu de navigation --- */
+.sidebar-nav {
+  flex: 1; /* Pousse le bouton de déconnexion vers le bas */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #cfc7ec; /* Violet clair pour les éléments inactifs */
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-link svg, .nav-link i {
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+/* Élément actif (Ex: Tableau de bord) */
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.12); /* Fond violet plus clair */
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* --- Pied de page (Déconnexion) --- */
+.sidebar-footer {
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Ligne de séparation très discrète (optionnel) */
+  padding-top: 16px;
+}

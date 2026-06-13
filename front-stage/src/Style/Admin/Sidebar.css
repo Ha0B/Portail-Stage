@@ -1,0 +1,144 @@
+/* ── Container Principal de la Sidebar ── */
+aside.sidebar {
+    width: 260px;
+    background: #5a2d0c !important;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar-nav__link {
+    text-decoration: none;
+}
+/* ── Brand (Logo) ── */
+aside.sidebar .sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 18px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+aside.sidebar .sidebar-brand__icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #c45e1a !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff !important;
+    flex-shrink: 0;
+}
+
+aside.sidebar .sidebar-brand__name {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #fff !important;
+    line-height: 1.2;
+}
+
+aside.sidebar .sidebar-brand__sub {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* ── User (Infos Utilisateur) ── */
+aside.sidebar .sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+aside.sidebar .sidebar-user__avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #c45e1a !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+    color: #fff !important;
+}
+
+aside.sidebar .sidebar-user__name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff !important;
+}
+
+aside.sidebar .sidebar-user__role {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ── Nav (Zone de Navigation) ── */
+aside.sidebar .sidebar-nav {
+    padding: 10px 0;
+    flex: 1;
+    background: transparent !important; /* Neutralise le bloc blanc indésirable */
+}
+
+aside.sidebar .sidebar-nav__item {
+    margin: 2px 10px;
+    background: transparent !important;
+}
+
+aside.sidebar .sidebar-nav__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: none !important;
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.72) !important; /* Rend le texte blanc/semi-transparent */
+    font-size: 0.82rem;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.15s, color 0.15s;
+}
+
+/* Au survol */
+aside.sidebar .sidebar-nav__link:hover {
+    background: #7a3d14 !important;
+    color: #fff !important;
+}
+
+/* Onglet Actif (Orange) */
+aside.sidebar .sidebar-nav__link--active {
+    background: #c45e1a !important;
+    color: #fff !important;
+}
+
+/* Bouton Déconnexion */
+aside.sidebar .sidebar-nav__link--logout {
+    color: #ff7b7b !important;
+    margin-top: 12px;
+}
+
+aside.sidebar .sidebar-nav__link--logout:hover {
+    background: rgba(255, 80, 80, 0.12) !important;
+    color: #ff5252 !important;
+}
+
+aside.sidebar .sidebar-nav__icon {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}

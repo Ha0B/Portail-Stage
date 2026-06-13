@@ -1,0 +1,12 @@
+.layout-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f7fe; /* Le fond clair de l'application */
+}
+
+.layout-main-content {
+  margin-left: 260px; /* Laisse exactement la largeur de la Sidebar vide à gauche */
+  width: calc(100% - 260px); /* Le contenu prend 100% du reste de l'écran */
+  padding: 32px;
+  box-sizing: border-box;
+}
