@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Attestation de Stage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            line-height: 1.6;
+            color: #000;
+        }
+        .header-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .header-subtitle {
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 14px;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        p {
+            margin: 6px 0;
+            font-size: 14px;
+        }
+        .certifie {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .phrase-cle {
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .signature-block {
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        .field-value {
+            font-weight: normal;
+        }
+        .signature-block { margin-top: 40px; font-size: 14px; }
+        .field-value { font-weight: normal; }
+    </style>
+</head>
+<body>
+
+<div class="header-title">ATTESTATION DE STAGE</div>
+<div class="header-subtitle">à remettre au stagiaire à l'issue du stage</div>
+
+<div class="section-title">ORGANISME D'ACCUEIL</div>
+<p>Nom ou dénomination sociale : <span class="field-value">{{nomEntreprise}}</span></p>
+<p>Adresse : <span class="field-value">{{adresseEntreprise}}, {{villeEntreprise}}</span></p>
+<p>Téléphone : <span class="field-value">{{telephoneEntreprise}}</span></p>
+<p>Nom du Responsable : <span class="field-value">{{nomResponsable}}</span></p>
+<p>Courriel : <span class="field-value">{{emailEntreprise}}</span></p>
+
+<p class="certifie">Certifie que :</p>
+
+<div class="section-title">LE STAGIAIRE</div>
+<p><strong>{{prenomEtudiant}} {{nomEtudiant}}</strong> :</p>
+
+
+<p>Numéro Étudiant (CNE): <span class="field-value">{{telephoneEtudiant}}</span></p>
+<p>Courriel : <span class="field-value">{{emailEtudiant}}</span></p>
+<br/>
+<p>Nom de la formation : <span class="field-value">{{filiere}} (Niveau: {{niveau}}, Promotion: {{promotion}})</span></p>
+
+<div class="phrase-cle">a effectué un stage prévu dans le cadre de ses études</div>
+
+<div class="section-title">DURÉE DU STAGE</div>
+<p>Dates de début et de fin de stage : <span class="field-value">du {{dateDebut}} au {{dateFin}}</span></p>
+<p>Représentant une durée totale de : <span class="field-value">{{dureeTotale}}</span></p>
+
+<div class="signature-block">
+    <p>A <span class="field-value">{{villeEntreprise}}</span>, le <span class="field-value">{{dateImpre}}</span></p>
+    <p>Nom / Prénom : <span class="field-value">{{nomResponsable}}</span></p>
+    <p>Fonction : <span class="field-value">{{fonctionResponsable}}</span></p>
+    <p>Signature :</p>
+    {{#signatureImage}}
+    <img src="{{signatureImage}}" style="max-width: 200px; max-height: 100px;" alt="Signature" />
+    {{/signatureImage}}
+</div>
+
+</body>
+</html>
